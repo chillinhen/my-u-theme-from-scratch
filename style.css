@@ -1,0 +1,46 @@
+/*
+Theme Name: A GOOD THEME TITLE
+Author: YOUR NAME or YOUR COMPANY NAME
+Author URI: http://www.YOUR-NAME.com
+Description: Call-to-Action-Phrase: Present any WordPress website in its entire beauty!!! use max. 300 Characters - i.e.: Present any WordPress website in its entire beauty!!! With this theme, you get support for Woocommerce, BuddyPress and because it is responsive, it looks amazing on mobile devices as well as your desktop and laptop computers!
+Tags: use wp backend, install new theme, filter features for some tags
+Version: 2.0
+*/
+BODY
+{
+	background-color:#DDF !important;
+}
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+/*.searchform input[type="submit"]{
+	background: cyan;
+}*/
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}

@@ -1,0 +1,55 @@
+<?php 
+wp_head(); 
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="<?php echo bloginfo('stylesheet_url'); ?>" />
+
+<?php if(!is_front_page() && !is_home()) { ?>
+<style type="text/css">
+BODY
+{
+	background-color:#DDF !important;
+}
+</style>
+<?php } ?>
+
+
+</head>
+
+<?php
+if(!is_single())
+{
+	echo '<a href="#">Read Our Blog!</a>';
+} 
+
+if(is_sticky())
+{
+	echo '<h3>This is a highlighted post!';
+}
+
+if(is_page())
+{
+	echo '<h4>This is a page</h4>';
+} else {
+	echo '<h4>This is NOT a page!</h4>';
+}
+
+if(!is_category('Social Media'))
+{
+	echo '<a href="http://localhost/wordpress4/index.php/category/social-media/">Visit Our Social Media Category.</a>';
+	wp_list_categories();
+}
+
+if(is_tag('microblogging'))
+{
+	echo '<h1 style="color:lime;">Welcome to our Microblogging tag</h1>';
+}
+
+if(is_page_template('page-highlights.php'))
+{
+	echo 'This is a highlighted page!';
+}
